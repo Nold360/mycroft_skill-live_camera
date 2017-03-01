@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Mycroft - LiveCamera</title>
+        <script type="text/javascript">
+            function refresh(){
+                document.getElementById('liveimage').src = "image.jpg?random="+new Date().getTime();
+                setTimeout('refresh()', 3000);
+            } 
+            if(document.images)window.onload=refresh;
+        </script>
+        <style>
+            body {
+                background: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Mycroft - LiveCamera</h2>
+            <img id='liveimage' src='image.jpg' />
+        </center>
+    </body>
+</html>
